@@ -1,0 +1,137 @@
+/* Reset základního stylu */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Celé tělo stránky */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Nadpis H1 */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Podnadpis H2 */
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+/* Odstavce */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Seznam kontaktu */
+#kontakt ul {
+  list-style: none;
+}
+
+#kontakt li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Tučné označení */
+strong {
+  color: #2980b9;
+}
+
+/* Odkazy */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+
+
+.profile-photo img {
+width: 100%;    /* fotka vyplní rámeček na šířku */
+  height: 100%;   /* a i na výšku */
+  object-fit: cover;  /* fotka se ořízne podle rámečku, aby nevznikly deformace */
+  display: block;
+   width: 180px;       /* šířka rámečku */
+  height: 220px;      /* výška rámečku */
+  border: 3px solid #3498db;  /* modrý rámeček */
+  border-radius: 20px;         /* oblé rohy */
+  overflow: hidden;            /* aby fotka nevykoukla ven z rámečku */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+#projekty {
+  margin-top: 40px;
+}
+
+#projekty .projekt {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#projekty .projekt h3 {
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+#projekty .projekt p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+#projekty .projekt a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#projekty .projekt a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
