@@ -68,14 +68,12 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
 .profile-photo img {
-width: 100%;    /* fotka vyplní rámeček na šířku */
+  width: 100%;    /* fotka vyplní rámeček na šířku */
   height: 100%;   /* a i na výšku */
   object-fit: cover;  /* fotka se ořízne podle rámečku, aby nevznikly deformace */
   display: block;
-   width: 180px;       /* šířka rámečku */
+  width: 180px;       /* šířka rámečku */
   height: 220px;      /* výška rámečku */
   border: 3px solid #3498db;  /* modrý rámeček */
   border-radius: 20px;         /* oblé rohy */
@@ -119,7 +117,117 @@ width: 100%;    /* fotka vyplní rámeček na šířku */
   text-decoration: underline;
 }
 
+/* Navigační menu */
+.navbar {
+  position: relative;
+}
 
+.nav-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.nav-toggle {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Upravené menu pro plynulé zobrazení bez poskakování */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;        /* šířka podle obsahu */
+  max-width: 220px;          /* maximální šířka */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 8px 12px;         /* trochu menší padding */
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+
+.nav-menu.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-menu li {
+  margin: 8px 0;
+}
+
+.nav-menu a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+/* Responsivita */
+@media (max-width: 480px) {
+  .nav-container {
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-toggle {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+.info-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* aby se přizpůsobilo mobilu */
+}
+
+.profile-photo {
+  flex-shrink: 0; /* fotka se nezmenšuje */
+}
+
+#kontakt {
+  flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #kontakt ul {
+    text-align: left;
+  }
+}
+
+#kontakt h2 {
+  margin-top: 0;
+}
 
 @media (max-width: 480px) {
   body {
@@ -134,4 +242,11 @@ width: 100%;    /* fotka vyplní rámeček na šířku */
   h2 {
     font-size: 1.4rem;
   }
+}
+
+.certificate-czechitas img {
+  max-width: 100%;  /* Obrázek se přizpůsobí šířce rodiče */
+  height: auto;     /* Zachová poměr stran */
+  border-radius: 10px; /* Můžeš dát i hezké zaoblení rohů */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Volitelný stín */
 }
